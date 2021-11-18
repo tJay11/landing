@@ -1,0 +1,215 @@
+.home-page {
+    min-height: 600px;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.header-content {
+    margin-top: 3.8em;
+}
+.header-content h1 {
+    font-weight: 700;
+    margin: 2.3em 0 2em 0;
+    background-image: linear-gradient( 90deg, rgb(114, 77, 151), var(--secondcol));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    display: inline-block;
+}
+
+.video {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+}
+
+.video::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 15px;
+    width: 3px;
+    height: 100%;
+    border-radius: 100vh;
+    background-color: rgb(194, 120, 228);
+}
+
+.video a {
+    width: 45px;
+    height: 45px;
+    border-radius: 100vh;
+    display: inline-block;
+    position: relative;
+    left: 11px;
+}
+
+.video a::before, .video a::after {
+    border-radius: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+}
+
+.video a::before {
+    content: '\ec74';
+    font-family: 'Icofont';
+    font-size: .8rem;
+    border-radius: 100vh;
+    color: var(--primarycol);
+    background: linear-gradient(130deg, rgb(167, 118, 216), rgb(101, 183, 234));
+    z-index: 3;
+    display: grid;
+    place-items: center;
+}
+
+.video a:hover::after {
+    content: '';
+    background: rgb(107, 201, 218);
+    border-radius: 100vh;
+    z-index: 1;
+    animation: pulse 900ms infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.9);
+        opacity: 0.85;
+    }
+    100% {
+        transform: scale(1.45);
+        opacity: 0;
+    }
+}
+
+.video p {
+    font-weight: 600;
+    color: rgb(73, 71, 74);
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 40px;
+}
+
+.buttons a {
+    display: inline-block;
+    padding: 7px 25px;
+    border-radius: 5px;
+    font-size: .9rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.buttons .invest {
+    color: var(--primarycol);
+    border: 2px solid var(--secondcol);
+    background: #1896bccf;
+}
+
+.buttons .invest:hover {
+    background: var(--secondcol);
+}
+
+.buttons .fund {
+    border: 2px solid rgb(73, 71, 74);
+    color: var(--textcol);
+    backdrop-filter: blur(4px);
+}
+
+.buttons .fund:hover {
+    background: rgb(73, 71, 74);
+    color: var(--primarycol);
+}
+
+/* Wave section */
+
+.wave {
+    position: absolute;
+    width: 100%;
+    line-height: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+.wave img {
+    display: block;
+    max-width: 100%;
+    width: 100%;
+}
+
+.wave::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 70%;
+    background: url(/assets/img/Vector2.svg) repeat-x;
+    background-position: -1000px 0;
+    opacity: .2;
+    animation: wavemove 60s linear infinite;
+}
+
+.wave::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 70%;
+    background: url(/assets/img/Vector2.svg) repeat-x;
+    background-position: 2732px 0;
+    opacity: .3;
+    animation: wavemove 120s linear infinite;
+}
+
+@keyframes wavemove {
+    50% {
+        background-position: 0 0;
+    }
+}
+
+@media (max-width:990px) {
+    .home-page {
+        min-height: 450px;
+    }
+    .buttons a, .video p {
+        font-size: 0.8rem;
+    }
+    .header-content h1 {
+        margin: 1.4em 0;
+    }
+}
+
+@media (max-width:764px) {
+    .header-content h1 {
+        margin: 1.3em 0 1.1em 0;
+        font-weight: 600;
+        font-size: 2rem;
+    }
+    .video {
+        margin-bottom: 2.3em;
+    }
+    .video a {
+        width: 35px;
+        height: 35px;
+    }
+    .video a::before {
+        font-size: .6rem;
+    }
+    .buttons {
+        justify-content: flex-start;
+        gap: 20px;
+    }
+}

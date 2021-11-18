@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en"></html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayuda | Home</title>
+
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+
+
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+    <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous"> -->
+
+
+
+
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/nav.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/landing.css">
+
+
+</head>
+
+
+<body>
+
+
+
+    <header class="header">
+        <div class="container-fluid">
+            <div class="container">
+                <nav class="d-flex justify-content-between align-items-center">
+                    
+                    <div class="logo">
+                        <a href="index.html" class="main__logo"><img src="assets/img/Ouick_Fund_logo.svg" alt=""></a>
+                    </div>
+
+                    <ul class="nav__links">
+                        <li class="active"><a href="#" class="hover-ef">Home</a></li>
+                        <li><a href="#" class="hover-ef">About Us</a></li>
+                        <li><a href="#" class="hover-ef">Campaigns</a></li>
+        
+                        <span class="mobile_nav">
+                            <ul>
+                                <li><a href="#" class="hover-ef">Register</a></li>
+                                <li><a href="#" class="hover-ef">Log In</a></li>
+                            </ul>
+                            
+                        </span>
+                    </ul>
+
+                    <div class="header-social-links">
+                    
+                    
+                        <div class="search-area d-flex">
+                            <button class="search-btn"><i class="icofont-search"></i></button>
+                            <input class="search-input" type="text" placeholder="Find Fundraisers" aria-label="Search">
+                        </div>
+                    
+
+                    
+                        <div class="sign-log d-flex">
+                            <span class=" signup-link"><a href="signup.html">Register</a></span>
+                            <span class="signup-link"><a href="login.html">Log In</a></span>
+                        </div>
+                    
+                    </div>
+                    <div class="burger">
+                        <button id="mob-search-btn" title="Search" class="search-btn"><i class="icofont-search p-2"></i></button>
+                        <div class="burger_menu ml-2">
+                            <div class="line1"></div>
+                            <div class="line2"></div>
+                            <div class="line3"></div>
+                        </div>
+
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+        
+
+
+    <div class="container-fluid home-page" style="background-image: url(assets/img/home.jpg);">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 header-content" data-aos="fade-down">
+                    <h1 data-aos="fade-right">Where dreams and dreamers <br> are brought together.</h1>
+
+                    <div class="row mb-5">
+                        <div class="col-md-6 video">
+                            <a class="venobox" data-autoplay="true" data-vbtype="video" href="#"></a>
+                            <p>see how Halo works</p>
+                        </div>
+
+                        <div class="col-md-6 buttons">
+                            <a class="fund" href="">Get Funding</a>
+
+                            <a class="invest" href="">Start Investing</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="wave">
+            <img src="assets/img/Vector.svg" alt="">
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <footer id="footer">
+        <div class="container">
+            <div class="credits">
+                <p>Designed by tJay</p>
+            </div>
+        </div>
+    </footer><!-- End  Footer -->
+
+
+
+
+
+
+    <div id="preloader"></div>
+    <a href="#" class="back-to-top"><i class="bx bx-up-arrow-alt"></i></a>
+
+    <script>
+        const mobileNavSlide = () => {
+            const burger = document.querySelector('.burger_menu');
+            const mobileNav = document.querySelector('.nav__links');
+            const navLinks = document.querySelectorAll('nav__links, li')
+
+            burger.addEventListener('click', () => {
+                //toggle mobile nav
+                mobileNav.classList.toggle('mobile-nav-active');
+                //animate mobile nav links
+                navLinks.forEach((link, index) => {
+                    if (link.style.animation) {
+                        link.style.animation = ''
+                    } else {
+                        link.style.animation = `navLinkFade 0.3s ease forwards ${index / 7 + 0.5}s`;
+                    }
+                });
+                //burger animation
+                burger.classList.toggle('toggle')
+            });
+
+        } 
+        mobileNavSlide();
+    </script>
+
+
+
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/jquery/jquery.min.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+    <!-- <script src="assets/vendor/php-email-form/validate.js"></script> -->
+    <script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+    <script src="assets/vendor/counterup/counterup.min.js"></script>
+    <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/venobox/venobox.min.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+
+
+
+
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
